@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "cheerio-httpcli": "^0.3.1",
-    "date-utils": "^1.2.16",
-    "spooky": "^0.2.5"
+    "date-utils": "^1.2.16"
   },
   "devDependencies": {},
   "author": "saxsir",
