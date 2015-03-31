@@ -1,2 +1,2 @@
-sm-crawler
+sm-scraper
 ===
