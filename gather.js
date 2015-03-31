@@ -28,7 +28,7 @@ casper.each(urls, function(casper, url, i) {
       var data = SMScraper.run();
       return data;
     });
-    this.echo(result.title);
+    this.echo(JSON.stringify(result));
   });
 });
 
