@@ -27,4 +27,7 @@ casper.each(urls, function(casper, url, i) {
   });
 });
 
-casper.run();
+casper.run(function() {
+  this.exit();
+});
+
