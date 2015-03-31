@@ -25,9 +25,10 @@ casper.start();
 casper.each(urls, function(casper, url, i) {
   return this.thenOpen(url, function() {
     var result = this.evaluate(function() {
-      return Hoge.getTitle();
+      var data = SMScraper.run();
+      return data;
     });
-    this.echo(result);
+    this.echo(result.title);
   });
 });
 
