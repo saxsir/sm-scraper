@@ -12,6 +12,7 @@ lines.pop();
 urls = lines.splice(3);
 
 var casper = require('casper').create({
+  clientScripts: ['lib/segment-page.js'],
   verbose: true,
   logLebel: 'warning',
   viewportSize: {
@@ -23,7 +24,10 @@ casper.start();
 
 casper.each(urls, function(casper, url, i) {
   return this.thenOpen(url, function() {
-    return this.echo(this.getTitle());
+    var result = this.evaluate(function() {
+      return Hoge.getTitle();
+    });
+    this.echo(result);
   });
 });
 
